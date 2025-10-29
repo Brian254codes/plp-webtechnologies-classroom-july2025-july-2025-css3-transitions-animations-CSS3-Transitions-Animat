@@ -75,4 +75,14 @@
         color: #cc4444; /* Red color on hover */
         transform: translateY(-2px); /* Lifts the link slightly */
     }
+    @keyframes spinAndScale {
+        0% { transform: scale(1) rotate(0deg); }
+        50% { color: #ff0000; }
+        100% { transform: scale(1.1) rotate(360deg); }
+    }
+    .active-spin {
+        animation: spinAndScale 1s ease-in-out forwards;
+        background-color: #ffff99;
+        padding: 10px;
+    }
 </style>
