@@ -1,0 +1,78 @@
+<style>
+    /* 1. Basic Setup (Optional but good practice) */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+
+    /* 2. Button Hover Effect (Transition) */
+    /* Target the submit button in the contact form */
+    button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        /* Define the transition for ALL properties */
+        transition: all 0.3s ease-in-out;
+    }
+
+    button[type="submit"]:hover {
+        /* Change the properties you want to transition to */
+        background-color: #0056b3;
+        transform: scale(1.05); /* Slightly enlarges the button */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 3. Smooth Title Fade-in (Animation on Load) */
+    /* Define the keyframes for a fade and slide up effect */
+    @keyframes fadeInSlideUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Apply the animation to all section headings */
+    main h2 {
+        opacity: 0; /* Start invisible */
+        animation: fadeInSlideUp 1s ease-out 0.5s forwards; /* 1s duration, ease-out timing, 0.5s delay, retains final state */
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+        margin-top: 40px;
+    }
+
+    /* 4. Continuous Background Animation (@keyframes) */
+    /* Define keyframes for subtle color shifting */
+    @keyframes subtleColorShift {
+        0% { background-color: #f4f4f9; }
+        50% { background-color: #e6e6ee; }
+        100% { background-color: #f4f4f9; }
+    }
+
+    /* Apply the animation to the main page body */
+    body {
+        animation: subtleColorShift 15s infinite alternate; /* 15s duration, loops forever, reverses direction */
+    }
+
+    /* 5. Navigation Link Hover (Transition) */
+    nav a {
+        display: inline-block; /* Essential for transforming inline elements */
+        padding: 5px 10px;
+        color: #007bff;
+        text-decoration: none;
+        /* Transition only the color and transform */
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+        color: #cc4444; /* Red color on hover */
+        transform: translateY(-2px); /* Lifts the link slightly */
+    }
+</style>
